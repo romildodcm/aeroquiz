@@ -1,0 +1,283 @@
+[
+  {
+    "question_id": 1,
+    "theme": "Aeroespacial",
+    "difficulty": 1,
+    "score": 10,
+    "question": "Qual o nome da sonda que retornou para a Terra trazendo amostras do asteroide Bennu?",
+    "options": [
+      { "Value": "IBEX", "IsCorrect": false },
+      { "Value": "OSIRIS-REx", "IsCorrect": true },
+      { "Value": "Insight", "IsCorrect": false },
+      { "Value": "New Horizons", "IsCorrect": false }
+    ],
+    "explanation": "Após 7 anos de seu lançamento, em 2023 retornou para a Terra a sonda OSIRIS-REx com amostras capturadas do asteroide Bennu."
+  },
+  {
+      "question_id": 2,
+      "theme": "Aeroespacial",
+      "difficulty": 1,
+      "score": 10,
+      "question": "Qual foi o primeiro ser humano a caminhar na Lua?",
+      "options": [
+          { "Value": "Neil Armstrong", "IsCorrect": true },
+          { "Value": "Buzz Aldrin", "IsCorrect": false },
+          { "Value": "Yuri Gagarin", "IsCorrect": false },
+          { "Value": "John Glenn", "IsCorrect": false }
+      ],
+      "explanation": "Neil Armstrong foi o primeiro ser humano a caminhar na Lua durante a missão Apollo 11."
+  },
+  {
+      "question_id": 3,
+      "theme": "Aeroespacial",
+      "difficulty": 2,
+      "score": 5,
+      "question": "Qual é a estação espacial que orbita a Terra em colaboração internacional?",
+      "options": [
+          { "Value": "Mir", "IsCorrect": false },
+          { "Value": "Skylab", "IsCorrect": false },
+          { "Value": "ISS (Estação Espacial Internacional)", "IsCorrect": true },
+          { "Value": "Salyut", "IsCorrect": false }
+      ],
+      "explanation": "A Estação Espacial Internacional (ISS) é uma colaboração entre várias agências espaciais e orbita a Terra para pesquisa e exploração."
+  },
+  {
+      "question_id": 4,
+      "theme": "Aeroespacial",
+      "difficulty": 3,
+      "score": 3,
+      "question": "Qual é o veículo da NASA usado para lançar astronautas à Lua durante o programa Apollo?",
+      "options": [
+          { "Value": "Space Shuttle", "IsCorrect": false },
+          { "Value": "Saturn V", "IsCorrect": true },
+          { "Value": "Falcon 9", "IsCorrect": false },
+          { "Value": "Atlas V", "IsCorrect": false }
+      ],
+      "explanation": "O foguete Saturn V foi o veículo usado para lançar astronautas à Lua durante o programa Apollo da NASA."
+  },
+  {
+      "question_id": 5,
+      "theme": "Aeroespacial",
+      "difficulty": 1,
+      "score": 10,
+      "question": "Qual é o nome do telescópio espacial lançado pela NASA em 1990?",
+      "options": [
+          { "Value": "Kepler", "IsCorrect": false },
+          { "Value": "Hubble", "IsCorrect": true },
+          { "Value": "Chandra", "IsCorrect": false },
+          { "Value": "Spitzer", "IsCorrect": false }
+      ],
+      "explanation": "O telescópio espacial lançado em 1990 é conhecido como Telescópio Espacial Hubble."
+  },
+  {
+      "question_id": 6,
+      "theme": "Aeroespacial",
+      "difficulty": 2,
+      "score": 5,
+      "question": "Qual é a agência espacial responsável pelo programa espacial chinês?",
+      "options": [
+          { "Value": "NASA", "IsCorrect": false },
+          { "Value": "ESA", "IsCorrect": false },
+          { "Value": "CNSA", "IsCorrect": true },
+          { "Value": "ISRO", "IsCorrect": false }
+      ],
+      "explanation": "A CNSA (China National Space Administration) é a agência espacial responsável pelo programa espacial da China."
+  },
+  {
+      "question_id": 7,
+      "theme": "Aeroespacial",
+      "difficulty": 3,
+      "score": 3,
+      "question": "Qual foi a primeira sonda a pousar em Marte com sucesso?",
+      "options": [
+          { "Value": "Viking 1", "IsCorrect": true },
+          { "Value": "Curiosity", "IsCorrect": false },
+          { "Value": "Opportunity", "IsCorrect": false },
+          { "Value": "Mars Pathfinder", "IsCorrect": false }
+      ],
+      "explanation": "A sonda Viking 1 da NASA foi a primeira a pousar em Marte com sucesso em 1976."
+  },
+  {
+      "question_id": 8,
+      "theme": "Aeroespacial",
+      "difficulty": 1,
+      "score": 10,
+      "question": "Qual é a maior lua de Júpiter, também conhecida por ser uma das luas com possíveis condições para abrigar vida?",
+      "options": [
+          { "Value": "Io", "IsCorrect": false },
+          { "Value": "Europa", "IsCorrect": true },
+          { "Value": "Ganímedes", "IsCorrect": false },
+          { "Value": "Calisto", "IsCorrect": false }
+      ],
+      "explanation": "Europa, uma das luas de Júpiter, é conhecida por suas características geológicas e possíveis oceanos sob a superfície, o que a torna um alvo interessante para a busca de vida."
+  },
+  {
+      "question_id": 9,
+      "theme": "Aeroespacial",
+      "difficulty": 2,
+      "score": 5,
+      "question": "Qual foi a primeira sonda espacial a estudar Plutão de perto?",
+      "options": [
+          { "Value": "Pioneer 10", "IsCorrect": false },
+          { "Value": "Voyager 2", "IsCorrect": false },
+          { "Value": "New Horizons", "IsCorrect": true },
+          { "Value": "Cassini", "IsCorrect": false }
+      ],
+      "explanation": "A sonda New Horizons da NASA foi a primeira a estudar Plutão de perto e capturar imagens detalhadas do planeta anão."
+  },
+  {
+      "question_id": 10,
+      "theme": "Aeroespacial",
+      "difficulty": 3,
+      "score": 3,
+      "question": "Qual é o nome do foguete reutilizável desenvolvido pela SpaceX?",
+      "options": [
+          { "Value": "Falcon 9", "IsCorrect": true },
+          { "Value": "Saturn V", "IsCorrect": false },
+          { "Value": "Delta IV", "IsCorrect": false },
+          { "Value": "Atlas V", "IsCorrect": false }
+      ],
+      "explanation": "O foguete reutilizável desenvolvido pela SpaceX é conhecido como Falcon 9."
+  },
+  {
+      "question_id": 11,
+      "theme": "Aeronáutica",
+      "difficulty": 1,
+      "score": 10,
+      "question": "Quem foi o pioneiro a voar num avião?",
+      "options": [
+          { "Value": "Santos Dumont", "IsCorrect": true },
+          { "Value": "Orville Wright", "IsCorrect": false },
+          { "Value": "Wilbur Wright", "IsCorrect": false },
+          { "Value": "Charles Lindbergh", "IsCorrect": false }
+      ],
+      "explanation": "Santos Dumont realizou o primeiro voo no “14 BIS”, primeiro avião mais pesado que o ar a conseguir decolar por meios próprios."
+  },
+  {
+      "question_id": 12,
+      "theme": "Aeronáutica",
+      "difficulty": 2,
+      "score": 5,
+      "question": "Qual é o fenômeno aeroespacial que ocorre quando o fluxo de ar sobre as asas de uma aeronave se separa da superfície?",
+      "options": [
+          { "Value": "Arrasto", "IsCorrect": false },
+          { "Value": "Sustentação", "IsCorrect": false },
+          { "Value": "Fluxo laminar", "IsCorrect": false },
+          { "Value": "Estol", "IsCorrect": true }
+      ],
+      "explanation": "O estol ocorre quando o fluxo de ar sobre as asas se separa da superfície, reduzindo a sustentação e aumentando o arrasto."
+  },
+  {
+      "question_id": 13,
+      "theme": "Aeronáutica",
+      "difficulty": 3,
+      "score": 3,
+      "question": "Qual é o avião comercial de passageiros mais vendido e amplamente utilizado no mundo?",
+      "options": [
+          { "Value": "Boeing 747", "IsCorrect": false },
+          { "Value": "Airbus A380", "IsCorrect": false },
+          { "Value": "Boeing 737", "IsCorrect": true },
+          { "Value": "Airbus A320", "IsCorrect": false }
+      ],
+      "explanation": "O Boeing 737 é um avião comercial muito vendido e amplamente utilizado em todo o mundo."
+  },
+  {
+      "question_id": 14,
+      "theme": "Aeronáutica",
+      "difficulty": 1,
+      "score": 10,
+      "question": "Qual é o nome da primeira mulher a voar sozinha sobre o Oceano Atlântico?",
+      "options": [
+          { "Value": "Bessie Coleman", "IsCorrect": false },
+          { "Value": "Amelia Earhart", "IsCorrect": true },
+          { "Value": "Valentina Tereshkova", "IsCorrect": false },
+          { "Value": "Jacqueline Cochran", "IsCorrect": false }
+      ],
+      "explanation": "Amelia Earhart foi a primeira mulher a voar sozinha sobre o Oceano Atlântico."
+  },
+  {
+      "question_id": 15,
+      "theme": "Aeronáutica",
+      "difficulty": 2,
+      "score": 5,
+      "question": "Qual é a unidade de medida da velocidade de uma aeronave em relação à velocidade do som?",
+      "options": [
+          { "Value": "Kilômetros por hora (km/h)", "IsCorrect": false },
+          { "Value": "Mach", "IsCorrect": true },
+          { "Value": "Nós (knots)", "IsCorrect": false },
+          { "Value": "Pés por segundo (ft/s)", "IsCorrect": false }
+      ],
+      "explanation": "A velocidade de uma aeronave em relação à velocidade do som é medida em Mach."
+  },
+  {
+      "question_id": 16,
+      "theme": "Aeronáutica",
+      "difficulty": 3,
+      "score": 3,
+      "question": "Qual foi o avião utilizado para lançar a primeira bomba atômica durante a Segunda Guerra Mundial?",
+      "options": [
+          { "Value": "B-29 Superfortress", "IsCorrect": true },
+          { "Value": "P-51 Mustang", "IsCorrect": false },
+          { "Value": "Spitfire", "IsCorrect": false },
+          { "Value": "Lancaster", "IsCorrect": false }
+      ],
+      "explanation": "O avião B-29 Superfortress foi usado para lançar a primeira bomba atômica durante a Segunda Guerra Mundial sobre Hiroshima."
+  },
+  {
+      "question_id": 17,
+      "theme": "Aeronáutica",
+      "difficulty": 1,
+      "score": 10,
+      "question": "Qual é a parte móvel na cauda de uma aeronave, projetada para controlar seu movimento em torno do eixo vertical?",
+      "options": [
+          { "Value": "Aileron", "IsCorrect": false },
+          { "Value": "Elevator", "IsCorrect": false },
+          { "Value": "Rudder", "IsCorrect": true },
+          { "Value": "Flap", "IsCorrect": false }
+      ],
+      "explanation": "O leme (rudder) é a parte móvel na cauda de uma aeronave que controla o movimento em torno do eixo vertical."
+  },
+  {
+      "question_id": 18,
+      "theme": "Aeronáutica",
+      "difficulty": 2,
+      "score": 5,
+      "question": "Qual é a altitude máxima alcançada por um avião comercial durante o voo?",
+      "options": [
+          { "Value": "30.000 pés", "IsCorrect": false },
+          { "Value": "50.000 pés", "IsCorrect": true },
+          { "Value": "100.000 pés", "IsCorrect": false },
+          { "Value": "70.000 pés", "IsCorrect": false }
+      ],
+      "explanation": "Os aviões comerciais geralmente atingem uma altitude máxima de cerca de 50.000 pés."
+  },
+  {
+      "question_id": 19,
+      "theme": "Aeronáutica",
+      "difficulty": 3,
+      "score": 3,
+      "question": "Qual é o processo pelo qual um avião perde altitude e velocidade rapidamente em um ângulo íngreme?",
+      "options": [
+          { "Value": "Taxi", "IsCorrect": false },
+          { "Value": "Cruzeiro", "IsCorrect": false },
+          { "Value": "Estol", "IsCorrect": true },
+          { "Value": "Mergulho", "IsCorrect": false }
+      ],
+      "explanation": "O mergulho é o processo pelo qual um avião perde altitude e velocidade rapidamente em um ângulo íngreme."
+  },
+  {
+      "question_id": 20,
+      "theme": "Aeronáutica",
+      "difficulty": 1,
+      "score": 10,
+      "question": "Quais são as três principais partes de uma aeronave?",
+      "options": [
+          { "Value": "Motor, asas, leme", "IsCorrect": false },
+          { "Value": "Fuselagem, ailerons, leme", "IsCorrect": false },
+          { "Value": "Asas, leme, flaps", "IsCorrect": false },
+          { "Value": "Fuselagem, asas, empenagem", "IsCorrect": true }
+      ],
+      "explanation": "As três principais partes de uma aeronave são fuselagem, asas e empenagem (que inclui o leme)."
+  }
+]
+
