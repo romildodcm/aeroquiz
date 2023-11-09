@@ -56,6 +56,8 @@ class Option:
 
 O terceiro ainda estou em dúvida de qual aplicar. Possivelmente o *Template Method* ao implementar as interfaces de usuário, ou o *Strategy* para as operações, mas ainda não tenho certeza.
 
+na hora de gerar o resultado final, na tela final da pntuação e acertos, fazer um templte da tela que segue um padrão de titulo, etc, mas a pontuação ser variada de acordo com o tema
+
 
 ---
 

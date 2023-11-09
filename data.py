@@ -1,6 +1,21 @@
 import json
 from models import Pergunta, Opcao
 
+    # Factory Method para criar instâncias da classe Pergunta
+def create_question(self, question_data):
+
+    # usar um contrutor para criar instâncias da classe Opcao e  melhorar
+    options = [Opcao(option_data['Value'], option_data['IsCorrect']) for option_data in question_data['options']]
+    return Pergunta(
+        question_data['question_id'],
+        question_data['theme'],
+        question_data['difficulty'],
+        question_data['score'],
+        question_data['question'],
+        options,
+        question_data['explanation']
+    )
+
 class DataProvider:
     _instance = None
 
@@ -12,18 +27,7 @@ class DataProvider:
                 cls._instance.data = json.load(file)
         return cls._instance
 
-    # Factory Method para criar instâncias da classe Pergunta
-    def create_question(self, question_data):
-        options = [Opcao(option_data['Value'], option_data['IsCorrect']) for option_data in question_data['options']]
-        return Pergunta(
-            question_data['question_id'],
-            question_data['theme'],
-            question_data['difficulty'],
-            question_data['score'],
-            question_data['question'],
-            options,
-            question_data['explanation']
-        )
+
 
     def get_question_by_id(self, question_id):
         for question_data in self.data:

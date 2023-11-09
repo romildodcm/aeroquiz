@@ -8,6 +8,8 @@ class Pergunta:
         self.options = options
         self.explanation = explanation
 
+        # colocar aqui o código para criar instâncias da classe Opcao
+
     def __repr__(self):
         return f"<Pergunta> ID:{self.question_id}, Tema:{self.theme}, Pergunta:{self.question}"
 
