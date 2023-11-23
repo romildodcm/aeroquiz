@@ -2,17 +2,17 @@ import json
 from models import Pergunta, Opcao
 
     # Factory Method para criar instâncias da classe Pergunta
-def create_question(self, question_data):
+def question_factory(question_data):
 
     # usar um contrutor para criar instâncias da classe Opcao e  melhorar
-    options = [Opcao(option_data['Value'], option_data['IsCorrect']) for option_data in question_data['options']]
+    # options = [Opcao(option_data['Value'], option_data['IsCorrect']) for option_data in question_data['options']]
     return Pergunta(
         question_data['question_id'],
         question_data['theme'],
         question_data['difficulty'],
         question_data['score'],
         question_data['question'],
-        options,
+        question_data['options'],
         question_data['explanation']
     )
 
@@ -27,21 +27,19 @@ class DataProvider:
                 cls._instance.data = json.load(file)
         return cls._instance
 
-
-
     def get_question_by_id(self, question_id):
         for question_data in self.data:
             if question_data['question_id'] == question_id:
-                return self.create_question(question_data)
+                return question_factory(question_data)
 
     def get_all_questions(self):
         # Método para obter todas as questões.
-        return [self.create_question(question_data) for question_data in self.data]
+        return [question_factory(question_data) for question_data in self.data]
 
     def get_questions_by_theme(self, theme):
         # Método para obter questões por tema.
-        return [self.create_question(question_data) for question_data in self.data if question_data['theme'] == theme]
+        return [question_factory(question) for question in self.data if question['theme'] == theme]
 
     def get_questions_by_id_range(self, start_id, end_id):
         # Método para obter questões por um intervalo de IDs.
-        return [self.create_question(question_data) for question_data in self.data if start_id <= question_data['question_id'] <= end_id]
+        return [question_factory(question_data) for question_data in self.data if start_id <= question_data['question_id'] <= end_id]
