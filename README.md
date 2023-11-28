@@ -1,5 +1,28 @@
 # aeroquiz
 
+### Executar o projeto
+
+```bash
+git clone https://github.com/romildodcm/aeroquiz
+sudo apt update
+apt install python3.8-venv
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+uvicorn --reload main:app
+```
+
+Executando o projeto após prepração do ambiente:
+
+```bash
+source env/bin/activate
+pip install -r requirements.txt
+uvicorn --reload main:app
+```
+
+Alternativa para execução: `uvicorn main:app`
+Ou selecionando a porta de execução no servidor: `uvicorn main:app --port 80 --host 0.0.0.0`
+
 ### Quiz sobre aeronáutica e aeroespacial
 
 **Objetivo:** Implementar uma aplicação do tipo Quiz onde o usuário pode testar seu conhecimento em determinado assunto(s). O app lê de um arquivo ou base de dados no mínimo 10 questões e apresenta ao usuário que poderá escolher uma alternativa por questão. Ao final é apresentado o resultado do quiz (nota, total de acertos). Na primeira fase, iniciar com a definição dos itens:
@@ -87,3 +110,5 @@ modelar de alguma maneira que se eu quiser implementar um bd no lugar do json, s
 # Observações
 
 https://www.youtube.com/results?search_query=cqrs+macoratti
+
+
