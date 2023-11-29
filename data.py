@@ -1,11 +1,9 @@
 import json
-from models import Pergunta, Opcao
+from models import Pergunta
 
-    # Factory Method para criar instâncias da classe Pergunta
+# Factory Method para criar instâncias da classe Pergunta
 def question_factory(question_data):
 
-    # usar um contrutor para criar instâncias da classe Opcao e  melhorar
-    # options = [Opcao(option_data['Value'], option_data['IsCorrect']) for option_data in question_data['options']]
     return Pergunta(
         question_data['question_id'],
         question_data['theme'],

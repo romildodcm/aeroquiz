@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException, Depends, Query, Body
 from data import DataProvider
-from models import Resposta
 from application import QuizApplication
 
 app = FastAPI()
@@ -20,11 +19,9 @@ async def get_questions(theme: str = Query(..., description="Theme of the questi
 
 @app.post("/validar-respostas")
 async def validate_answers(user_answers: list = Body(...)):
-    # se a lsita for vaiza, retorna erro bad request
     if not user_answers:
         raise HTTPException(status_code=400, detail="Empty list of answers")
 
-    # total_score, correct_answers =
     return quiz_app.validate_answers(user_answers)
 
 
