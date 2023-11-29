@@ -1,10 +1,20 @@
 from fastapi import FastAPI, HTTPException, Depends, Query, Body
+from fastapi.middleware.cors import CORSMiddleware
 from data import DataProvider
 from application import QuizApplication
 
 app = FastAPI()
 data_provider = DataProvider()
 quiz_app = QuizApplication(data_provider)
+
+# Configurar o CORS para aceitar qualquer origem
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permitir qualquer origem
+    allow_credentials=True,
+    allow_methods=["*"],  # Permitir todos os métodos HTTP
+    allow_headers=["*"],  # Permitir todos os cabeçalhos
+)
 
 @app.get("/")
 async def root():
