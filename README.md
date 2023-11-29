@@ -112,3 +112,279 @@ modelar de alguma maneira que se eu quiser implementar um bd no lugar do json, s
 https://www.youtube.com/results?search_query=cqrs+macoratti
 
 
+
+# Uso da API
+
+## Obter todas as questões
+
+### Request
+
+`GET /perguntas`
+
+http://62.72.9.154:8152/perguntas?theme=Aeronáutica&quantity=4
+
+Query parameters:
+
+- `theme=[string]`, sendo *Aeronáutica* ou *Aeroespacial*
+- `quantity=[integer]`, sendo um número inteiro entre 1 e 10, indicando a quantidade de questões a serem retornadas, recomendado 5 ou 6.
+
+Exemplo de resposta:
+
+```JSON
+[
+    {
+        "question_id": 11,
+        "theme": "Aeronáutica",
+        "difficulty": 1,
+        "question": "Quem foi o pioneiro a voar num avião?",
+        "options": [
+            {
+                "value": "Santos Dumont",
+                "selected": false
+            },
+            {
+                "value": "Orville Wright",
+                "selected": false
+            },
+            {
+                "value": "Wilbur Wright",
+                "selected": false
+            },
+            {
+                "value": "Charles Lindbergh",
+                "selected": false
+            }
+        ]
+    },
+    {
+        "question_id": 13,
+        "theme": "Aeronáutica",
+        "difficulty": 3,
+        "question": "Qual é o avião comercial de passageiros mais vendido e amplamente utilizado no mundo?",
+        "options": [
+            {
+                "value": "Boeing 747",
+                "selected": false
+            },
+            {
+                "value": "Airbus A380",
+                "selected": false
+            },
+            {
+                "value": "Boeing 737",
+                "selected": false
+            },
+            {
+                "value": "Airbus A320",
+                "selected": false
+            }
+        ]
+    },
+    {
+        "question_id": 17,
+        "theme": "Aeronáutica",
+        "difficulty": 1,
+        "question": "Qual é a parte móvel na cauda de uma aeronave, projetada para controlar seu movimento em torno do eixo vertical?",
+        "options": [
+            {
+                "value": "Aileron",
+                "selected": false
+            },
+            {
+                "value": "Elevator",
+                "selected": false
+            },
+            {
+                "value": "Rudder",
+                "selected": false
+            },
+            {
+                "value": "Flap",
+                "selected": false
+            }
+        ]
+    },
+    {
+        "question_id": 20,
+        "theme": "Aeronáutica",
+        "difficulty": 1,
+        "question": "Quais são as três principais partes de uma aeronave?",
+        "options": [
+            {
+                "value": "Motor, asas, leme",
+                "selected": false
+            },
+            {
+                "value": "Fuselagem, ailerons, leme",
+                "selected": false
+            },
+            {
+                "value": "Asas, leme, flaps",
+                "selected": false
+            },
+            {
+                "value": "Fuselagem, asas, empenagem",
+                "selected": false
+            }
+        ]
+    }
+]
+```
+
+`POST /validar-respostas`
+
+http://62.72.9.154:8152/validar-respostas
+
+Com o body:
+
+```JSON
+[
+    {
+        "question_id": 11,
+        "option": "Santos Dumont"
+    },
+    {
+        "question_id": 13,
+        "option": "Airbus A320"
+    },
+    {
+        "question_id": 17,
+        "option": "Elevator"
+    },
+    {
+        "question_id": 20,
+        "option": "Motor, asas, leme"
+    }
+]
+```
+
+e a resposta:
+
+```JSON
+{
+    "score": 10,
+    "correct_answers": 1,
+    "questions": [
+        {
+            "question_id": 11,
+            "theme": "Aeronáutica",
+            "difficulty": 1,
+            "score": 10,
+            "question": "Quem foi o pioneiro a voar num avião?",
+            "options": [
+                {
+                    "value": "Santos Dumont",
+                    "is_correct": true,
+                    "selected": true
+                },
+                {
+                    "value": "Orville Wright",
+                    "is_correct": false,
+                    "selected": false
+                },
+                {
+                    "value": "Wilbur Wright",
+                    "is_correct": false,
+                    "selected": false
+                },
+                {
+                    "value": "Charles Lindbergh",
+                    "is_correct": false,
+                    "selected": false
+                }
+            ],
+            "explanation": "Santos Dumont realizou o primeiro voo no “14 BIS”, primeiro avião mais pesado que o ar a conseguir decolar por meios próprios."
+        },
+        {
+            "question_id": 13,
+            "theme": "Aeronáutica",
+            "difficulty": 3,
+            "score": 3,
+            "question": "Qual é o avião comercial de passageiros mais vendido e amplamente utilizado no mundo?",
+            "options": [
+                {
+                    "value": "Boeing 747",
+                    "is_correct": false,
+                    "selected": false
+                },
+                {
+                    "value": "Airbus A380",
+                    "is_correct": false,
+                    "selected": false
+                },
+                {
+                    "value": "Boeing 737",
+                    "is_correct": true,
+                    "selected": false
+                },
+                {
+                    "value": "Airbus A320",
+                    "is_correct": false,
+                    "selected": true
+                }
+            ],
+            "explanation": "O Boeing 737 é um avião comercial muito vendido e amplamente utilizado em todo o mundo."
+        },
+        {
+            "question_id": 17,
+            "theme": "Aeronáutica",
+            "difficulty": 1,
+            "score": 10,
+            "question": "Qual é a parte móvel na cauda de uma aeronave, projetada para controlar seu movimento em torno do eixo vertical?",
+            "options": [
+                {
+                    "value": "Aileron",
+                    "is_correct": false,
+                    "selected": false
+                },
+                {
+                    "value": "Elevator",
+                    "is_correct": false,
+                    "selected": true
+                },
+                {
+                    "value": "Rudder",
+                    "is_correct": true,
+                    "selected": false
+                },
+                {
+                    "value": "Flap",
+                    "is_correct": false,
+                    "selected": false
+                }
+            ],
+            "explanation": "O leme (rudder) é a parte móvel na cauda de uma aeronave que controla o movimento em torno do eixo vertical."
+        },
+        {
+            "question_id": 20,
+            "theme": "Aeronáutica",
+            "difficulty": 1,
+            "score": 10,
+            "question": "Quais são as três principais partes de uma aeronave?",
+            "options": [
+                {
+                    "value": "Motor, asas, leme",
+                    "is_correct": false,
+                    "selected": true
+                },
+                {
+                    "value": "Fuselagem, ailerons, leme",
+                    "is_correct": false,
+                    "selected": false
+                },
+                {
+                    "value": "Asas, leme, flaps",
+                    "is_correct": false,
+                    "selected": false
+                },
+                {
+                    "value": "Fuselagem, asas, empenagem",
+                    "is_correct": true,
+                    "selected": false
+                }
+            ],
+            "explanation": "As três principais partes de uma aeronave são fuselagem, asas e empenagem (que inclui o leme)."
+        }
+    ]
+}
+```
